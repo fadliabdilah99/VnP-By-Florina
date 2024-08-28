@@ -13,4 +13,9 @@ class color extends Model
     {
         return $this->belongsTo(produk::class);
     }
+
+    public function stok()
+    {
+        return $this->hasMany(stokprod::class);
+    }
 }

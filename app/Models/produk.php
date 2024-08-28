@@ -32,5 +32,10 @@ class produk extends Model
     public function color()
     {
         return $this->hasMany(color::class);
-    }   
+    }
+
+    public function stok()
+    {
+        return $this->hasMany(stokprod::class);
+    }
 }

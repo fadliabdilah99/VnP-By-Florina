@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class size extends Model
+class stokprod extends Model
 {
     protected $guarded = [];
 
@@ -14,8 +14,11 @@ class size extends Model
         return $this->belongsTo(produk::class);
     }
 
-    public function stok()
-    {
-        return $this->hasMany(stokprod::class);
+    public function color(){
+        return $this->belongsTo(color::class);
+    }
+
+    public function size(){
+        return $this->belongsTo(size::class);
     }
 }

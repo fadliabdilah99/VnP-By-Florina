@@ -71,7 +71,10 @@
                             <td>{{ $produk->kategori->nama }}</td>
                             <td>{{ $produk->deskripsi }}</td>
                             <td>{{ $produk->harga }}</td>
-                            <td>{{ $produk->stok }}</td>
+                            <td>{{ $produk->stok }}
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#stok{{ $produk->id }}">edit</button>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-primary" data-toggle="modal"
                                     data-target="#foto{{ $produk->id }}">View</button>

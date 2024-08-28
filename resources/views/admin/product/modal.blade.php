@@ -99,6 +99,33 @@
         </div>
     </div>
 
+
+    <div class="modal fade" id="stok{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="exampleModalLabel">edit stok baju</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" action="{{ url('size') }}" method="POST">
+                        @csrf
+                        <input hidden type="number" value="{{ $item->id }}" name="produk_id">
+                        <div class="form-group row">
+                            <label for="size" class="col-sm-2 col-form-label">size</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="size" name="ukuran"
+                                    placeholder="S/M/L/XL..">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info">Tambahkan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="color{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
